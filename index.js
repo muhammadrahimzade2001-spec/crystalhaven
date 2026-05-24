@@ -1,3 +1,4 @@
+require('dotenv').config();
 // ╔══════════════════════════════════════════════════════════════╗
 // ║         CrystalHaven Network - BoxPvP Discord Bot            ║
 // ║              Developed for CrystalHaven Network              ║

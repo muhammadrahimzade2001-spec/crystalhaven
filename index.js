@@ -167,8 +167,10 @@ client.once("ready", () => {
   client.user.setPresence({
     activities: [{ name: `⚔️ CrystalHaven Network | ${CONFIG.PREFIX}yardim`, type: 3 }],
     status: "online",
-    });
-}
+  });
+
+  setInterval(checkCekilisEnd, 10000);
+});
 
 // ─────────────────────────────────────────────
 //  MESSAGE CREATE — KOMUT ROUTER

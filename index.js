@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 // ╔══════════════════════════════════════════════════════════════╗
-// ║         CrystalHaven Network - BoxPvP Discord Bot            ║
+// ║         CrystalHaven Network - Discord Bot                   ║
 // ║              Developed for CrystalHaven Network              ║
 // ╚══════════════════════════════════════════════════════════════╝
 
@@ -83,7 +83,7 @@ const CONFIG = {
       hile:         { label: "Hile",        emoji: "🎮", color: 0xff6b35, description: "Hile/cheat şikayeti" },
       bug:          { label: "Bug",         emoji: "🐛", color: 0xffa502, description: "Hata/bug bildirimi" },
       sosyal_medya: { label: "Sosyal Medya",emoji: "📱", color: 0x00d4ff, description: "Sosyal medya/tanıtım" },
-      kredi:        { label: "Kredi",       emoji: "💎", color: 0x57f287, description: "Kredi/ödeme sorunu" },
+      kredi:        { label: "Kredi",       emoji: "💳", color: 0x57f287, description: "Kredi/ödeme sorunu" },
       diger:        { label: "Diğer",       emoji: "📋", color: 0x747d8c, description: "Diğer konular" },
     },
   },
@@ -212,7 +212,7 @@ function buildTicketPanelEmbed(guild) {
   return new EmbedBuilder()
     .setColor(CONFIG.COLORS.TICKET)
     .setAuthor({
-      name: "Elmas Destek",
+      name: "CrystalHaven Network — Destek",
       iconURL: guild.iconURL({ dynamic: true }),
     })
     .setTitle("🎫 Destek Talebi Oluştur")
@@ -241,7 +241,7 @@ function buildTicketPanelEmbed(guild) {
         inline: false,
       },
     )
-    .setFooter({ text: "CrystalHaven Network — BoxPvP Destek Sistemi" })
+    .setFooter({ text: "CrystalHaven Network — Destek Sistemi | play.crystalhaven.net" })
     .setTimestamp();
 }
 
@@ -286,7 +286,7 @@ function buildTicketChannelEmbed(user, category, ticketId, aciklama) {
         value: `Hafta içi: **${CONFIG.TICKET.SUPPORT_HOURS.WEEKDAY}**\nHafta sonu: **${CONFIG.TICKET.SUPPORT_HOURS.WEEKEND}**`,
       },
     )
-    .setFooter({ text: "CrystalHaven Network | Ticket sistemi" })
+    .setFooter({ text: "CrystalHaven Network | play.crystalhaven.net" })
     .setTimestamp();
 }
 
@@ -1058,7 +1058,7 @@ async function cmdAktif(message, args) {
       (not ? `\n\n📝 **Not:** ${not}` : "")
     )
     .setThumbnail(message.guild.iconURL())
-    .setFooter({ text: "CrystalHaven Network — BoxPvP" })
+    .setFooter({ text: "CrystalHaven Network" })
     .setTimestamp();
 
   const duyuruCh = message.guild.channels.cache.get(CONFIG.CHANNELS.DUYURU);
@@ -1198,7 +1198,7 @@ async function checkCekilisEnd() {
 
 async function cmdKasaAc(message) {
   const items = [
-    { name: "💎 Elmas Kılıç",   rarity: "Efsane",  color: 0x9b59b6 },
+    { name: "🔷 Kristal Kılıç",  rarity: "Efsane",  color: 0x9b59b6 },
     { name: "🛡️ Kristal Zırh",  rarity: "Nadir",   color: CONFIG.COLORS.PRIMARY },
     { name: "⚡ Şimşek Ok",     rarity: "Nadir",   color: CONFIG.COLORS.PRIMARY },
     { name: "🔑 Kasa Anahtarı", rarity: "Sıradan", color: CONFIG.COLORS.SUCCESS },

@@ -1392,4 +1392,4 @@ process.on("uncaughtException", err => console.error("[UncaughtException]", err)
 // ─────────────────────────────────────────────
 //  BOTU BAŞLAT
 // ─────────────────────────────────────────────
-client.login(CONFIG.TOKEN);
+client.login(process.env.TOKEN);

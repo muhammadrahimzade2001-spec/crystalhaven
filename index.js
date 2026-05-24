@@ -167,17 +167,6 @@ client.once("ready", () => {
   client.user.setPresence({
     activities: [{ name: `⚔️ CrystalHaven Network | ${CONFIG.PREFIX}yardim`, type: 3 }],
     status: "online",
-  });
-
-  setInterval(checkCekilisEnd, 10000);
-});
-// Sadece bu Role ID'sine sahip olanlar kullanabilir
-const rolID = '1508072318277259365';
-
-if (!interaction.member.roles.cache.has(rolID)) {
-    return interaction.reply({ 
-        content: 'Bu komutu kullanmak için gerekli role sahip değilsin!', 
-        ephemeral: true 
     });
 }
 

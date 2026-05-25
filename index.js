@@ -1650,4 +1650,5 @@ process.on("uncaughtException",  err => console.error("[UncaughtException]", err
 // ─────────────────────────────────────────────
 //  LOGIN
 // ─────────────────────────────────────────────
-client.login(CONFIG.TOKEN);
+client.login(process.env.DISCORD_TOKEN);
+
